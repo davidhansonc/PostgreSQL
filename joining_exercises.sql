@@ -6,10 +6,10 @@
             Oregon (OR) state
 * ordered by orderid
 */
--- SELECT o.orderid, o.totalamount, CONCAT(c.firstname, ' ', c.lastname) AS "Name", c.state FROM orders AS o
--- INNER JOIN customers AS c ON o.customerid = c.customerid
---     WHERE c.state IN ('OH', 'OH', 'NY')
--- ORDER BY orderid;
+SELECT o.orderid, o.totalamount, CONCAT(c.firstname, ' ', c.lastname) AS "Name", c.state FROM orders AS o
+INNER JOIN customers AS c ON o.customerid = c.customerid
+    WHERE c.state IN ('OH', 'OH', 'NY')
+ORDER BY orderid;
 
 
 /*
@@ -27,7 +27,7 @@ ORDER BY p.prod_id;
 * Table: employees
 * Question: Show me for each employee which department they work in
 */
--- SELECT a.emp_no, CONCAT(first_name, ' ', last_name) as Name, c.dept_name FROM employees AS a
--- INNER JOIN dept_emp as b ON a.emp_no = b.emp_no
--- INNER JOIN departments as c ON b.dept_no = c.dept_no
--- ORDER BY a.emp_no;
+SELECT a.emp_no, CONCAT(first_name, ' ', last_name) as Name, c.dept_name FROM employees AS a
+INNER JOIN dept_emp as b ON a.emp_no = b.emp_no
+INNER JOIN departments as c ON b.dept_no = c.dept_no
+ORDER BY a.emp_no;
