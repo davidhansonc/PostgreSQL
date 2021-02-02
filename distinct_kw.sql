@@ -4,7 +4,7 @@
 * Question: What unique titles do we have?
 */
 
--- SELECT DISTINCT title FROM titles;
+SELECT DISTINCT title FROM titles;
 
 
 /*
@@ -13,7 +13,7 @@
 * Question: How many unique birth dates are there?
 */
 
--- SELECT COUNT(DISTINCT birth_date) FROM employees;
+SELECT COUNT(DISTINCT birth_date) FROM employees;
 
 /*
 * DB: World
