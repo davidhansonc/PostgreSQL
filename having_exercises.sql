@@ -27,8 +27,8 @@ SELECT  e.emp_no
 FROM employees AS e
 JOIN salaries AS s
       ON e.emp_no = s.emp_no
-JOIN dept_emp AS de
-      ON e.emp_no = de.emp_no
+JOIN dept_emp AS de ON e.emp_no = de.emp_no
+JOIN departments AS dp ON de.dept_no = dp.dept_no
 WHERE de.dept_no = 'd005'
 GROUP BY  e.emp_no
       HAVING COUNT(s.salary) > 15
