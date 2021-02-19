@@ -45,3 +45,5 @@ JOIN dept_emp AS de USING(emp_no)
 GROUP BY  e.emp_no
 HAVING COUNT(de.dept_no) > 1
 ORDER BY e.emp_no;
+
+select * from 
